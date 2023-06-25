@@ -35,7 +35,7 @@ window.onload = async () => {
 
       const star = document.createElement('a');
       star.setAttribute('class', 'star');
-      star.innerHTML = 'favoritos';
+      star.innerHTML = '<i class="far fa-star"></i>';
      /*  star.setAttribute('id', 'movie' + movie.id) */
 
       container.appendChild(card);
@@ -70,6 +70,7 @@ window.onload = async () => {
       let index = Array.from(favoriteMovie).indexOf(event.currentTarget);
  let selectedMovie = data[index];
  favoritos.push(selectedMovie);
+ starID.innerHTML = '<i class="fas fa-star"></i>';
  localStorage.setItem("movie", JSON.stringify(favoritos)); 
  console.log(JSON.parse(localStorage.getItem("movie")));
       
